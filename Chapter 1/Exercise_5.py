@@ -1,11 +1,11 @@
 #Author : Yogendra Sharma
 #Date   : 28/06/2017
 
-# map a protocol name (e.g. 'tcp') to a number
+# get service name from port number.
 
 # importing python socket module
+
 import socket
-
-
-PORT = socket.getprotobyname("tcp")
-print("{0} ".format(PORT))
+port = 80
+service = socket.getservbyport(port)
+print("The Port {0} is represent \"{1}\" Service".format(port,service))
