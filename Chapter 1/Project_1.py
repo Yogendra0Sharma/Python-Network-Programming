@@ -10,8 +10,8 @@ import socket
 
 def ShowServiceByPort(port):
     try:
-        service = socket.getservbyport(port)
-        print("The Port '{0}' Belongs to '{1}' Service".format(port,service))
+    service = socket.getservbyport(port)
+    print("The Port '{0}' Belongs to '{1}' Service".format(port,service))
     except OSError:
         print("Oops!  That was no valid number.  Try again...")
 
