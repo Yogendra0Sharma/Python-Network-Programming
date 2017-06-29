@@ -41,10 +41,10 @@ serverSocket.listen(5)      # 5 client can connect.
 while 1:
     # Establish connection with client.
     clientSocket,clientaddress = serverSocket.accept()
-    print("Got Connected with %s" % clientaddress)
+    print("Got Connected with {0}".format(clientaddress))
 
     # Send some data to clinet socket.
     # Python 3.x all Strings are unicode so need to send byte string
-    clientSocket.send(b'Thanks for connecting')
+    clientSocket.send(b"Thanks for connecting")
     clientSocket.close()
     
